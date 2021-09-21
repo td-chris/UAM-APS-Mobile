@@ -1,9 +1,52 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cadastro</ion-title>
+    <ion-title>Moovie app</ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
+
+  <div id="container">
+    <ion-card>
+      <div id="content">
+        <ion-item>
+          <ion-label>Nome: <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Sobrenome: <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Email <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Senha: <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required></ion-input>
+        </ion-item>
+      </div>      
+
+      <div id="buttons">
+        <ion-button (click)="onClick()" color="primary" expand="block" shape="round">
+          Cadastrar
+        </ion-button>
+      </div>
+
+      <div id="buttons">
+        <ion-button routerLink="/home" color="dark" expand="block" shape="round">
+          Voltar
+        </ion-button>
+      </div>
+    </ion-card>
+
+    
+
+  </div>
+
 
 </ion-content>
