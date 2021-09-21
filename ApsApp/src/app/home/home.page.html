@@ -1,20 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Moovie app
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-card>
+      <div id="inputs">
+        <ion-item>
+          <ion-label>Email: <ion-text color="danger"></ion-text></ion-label>
+          <ion-input required></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Senha: <ion-text color="danger"></ion-text></ion-label>
+          <ion-input required></ion-input>
+        </ion-item>
+      </div>
+      
+      <div id="buttons">
+        <ion-button (click)="onClick()" color="dark" expand="block" shape="round">
+          Entrar
+        </ion-button>
+      </div>
+
+      <div id="buttons">
+        <ion-button (click)="onClick()" color="secondary" expand="block" shape="round">
+          Registrar
+        </ion-button>
+      </div>
+
+    </ion-card>
   </div>
 </ion-content>
