@@ -1,0 +1,7 @@
+{
+  "name": "ApsApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
