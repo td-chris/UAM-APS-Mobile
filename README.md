@@ -7,6 +7,6 @@ O objetivo é criar um aplicativo mobile para simular um streaming de filmes, ut
 -----------------
 Techs:
 
--Ionic
--Angular
--TypeScript
+- Ionic;
+- Angular;
+- TypeScript
