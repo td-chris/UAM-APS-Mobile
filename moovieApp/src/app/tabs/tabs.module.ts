@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { TabsPageRoutingModule } from './tabs-routing.module';
+import { IntroPageRoutingModule } from '../intro/intro-routing.module';
 
 import { TabsPage } from './tabs.page';
 
@@ -12,7 +13,8 @@ import { TabsPage } from './tabs.page';
     IonicModule,
     CommonModule,
     FormsModule,
-    TabsPageRoutingModule
+    TabsPageRoutingModule,
+    IntroPageRoutingModule
   ],
   declarations: [TabsPage]
 })

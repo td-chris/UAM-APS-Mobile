@@ -1,9 +1,31 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>intro</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
 
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div class="slide">
+        <div id="images">
+          <img src="../../assets/images/time.svg" alt="clock">
+        </div>
+        <h2>Cansado de perder tempo vendo filmes ruins?</h2>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <div id="images">
+          <img src="../../assets/images/tv.svg" alt="television"> 
+        </div>
+        <h2>Quer ter dicas para ganhar tempo e se divertir mais?</h2>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <div id="images">
+          <img id="cellphone" src="../../assets/images/cellphone.svg" alt="cellphone">
+        </div>
+        <h2>Bem vindo ao Moovie app!</h2>
+        <p>Dicas para os melhores filmes na palma da sua mão!</p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  
 </ion-content>

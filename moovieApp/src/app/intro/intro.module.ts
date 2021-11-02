@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { IntroPageRoutingModule } from './intro-routing.module';
+import { TabsPageRoutingModule } from '../tabs/tabs-routing.module';
 
 import { IntroPage } from './intro.page';
 
@@ -13,7 +14,8 @@ import { IntroPage } from './intro.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    IntroPageRoutingModule
+    IntroPageRoutingModule,
+    TabsPageRoutingModule
   ],
   declarations: [IntroPage]
 })
