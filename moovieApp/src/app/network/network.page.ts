@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class NetworkPage {
   public objeto_feed = {
     nome: "Marty McFly",
-    data: "November 5, 1955",
+    data: "Nov. 5, 1955",
     descricao: "Wait a minute. Wait a minute, Doc ...",
     qntd_likes: 12,
     qntd_comments: 4,
