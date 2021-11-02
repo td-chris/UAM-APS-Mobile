@@ -6,6 +6,12 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
+    children: [
+      {
+        path: 'filmes',
+        loadChildren: () => import('../filmes/filmes.module').then( m => m.FilmesPageModule)
+      },
+    ],
   }
 ];
 
