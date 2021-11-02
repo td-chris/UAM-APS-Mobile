@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
+
 interface Iuser {
   nome: string;
   sobrenome: string;
   email: string;
   senha: string;
 }
+
+
 
 @Component({
   selector: 'app-cadastro',
@@ -14,7 +17,9 @@ interface Iuser {
 })
 export class CadastroPage implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    this.user;
+   }
 
   ngOnInit() {
   }
@@ -49,5 +54,5 @@ export class CadastroPage implements OnInit {
         alert('Cadastro concluido')
       }
     }
-
+    
 }
