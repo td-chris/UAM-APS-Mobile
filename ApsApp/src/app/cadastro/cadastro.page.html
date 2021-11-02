@@ -12,27 +12,27 @@
       <div id="content">
         <ion-item>
           <ion-label>Nome: <ion-text color="danger">*</ion-text></ion-label>
-          <ion-input required></ion-input>
+          <ion-input [(ngModel)]="username" required></ion-input>
         </ion-item>
   
         <ion-item>
           <ion-label>Sobrenome: <ion-text color="danger">*</ion-text></ion-label>
-          <ion-input required></ion-input>
+          <ion-input [(ngModel)]="userLastName" required></ion-input>
         </ion-item>
   
         <ion-item>
           <ion-label>Email <ion-text color="danger">*</ion-text></ion-label>
-          <ion-input required></ion-input>
+          <ion-input [(ngModel)]="email" required></ion-input>
         </ion-item>
   
         <ion-item>
           <ion-label>Senha: <ion-text color="danger">*</ion-text></ion-label>
-          <ion-input required></ion-input>
+          <ion-input [(ngModel)]="password" required></ion-input>
         </ion-item>
       </div>      
 
       <div id="buttons">
-        <ion-button (click)="onClick()" color="secondary" expand="block" shape="round">
+        <ion-button (click)="cadastrar()" color="secondary" expand="block" shape="round">
           Cadastrar
         </ion-button>
       </div>
@@ -42,9 +42,8 @@
           Voltar
         </ion-button>
       </div>
-    </ion-card>
 
-    
+    </ion-card>
 
   </div>
 
