@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card *ngFor="let filme of lista_filmes">
+    <ion-item>
+      <h1>{{ filme.original_title }}</h1>
+    </ion-item>
+
+      <img src="https://image.tmdb.org/t/p/w500/{{ filme.backdrop_path }}" alt="movie image">
+
+    <ion-card-content>
+      <p>{{ filme.overview }}</p>
+    </ion-card-content>
+  
+  </ion-card>
+
+</ion-content>
