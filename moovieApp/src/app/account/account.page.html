@@ -7,11 +7,30 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">User</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-title color="primary">
+      <h1>User</h1> 
+    </ion-card-title>
 
-  <app-explore-container name="Account page"></app-explore-container>
+    <ion-text>
+      <h3>Nome:</h3>
+      <p>User213587</p>
+    </ion-text>
+    <ion-text>
+      <h3>Sobrenome:</h3>
+      <p>-</p>
+    </ion-text>
+    <ion-text>
+      <h3>Filmes favoritos:</h3>
+      <p>-</p>
+    </ion-text>
+    <ion-text>
+      <h3>Generos favoritos:</h3>
+      <p>-</p>
+    </ion-text>
+  </ion-card>
+
+  <!-- <ion-button (click)="onClick()" expand="block" color="primary" shape="round">
+    Atualizar
+  </ion-button> -->
 </ion-content>
