@@ -6,8 +6,13 @@ import { FilmesPage } from './filmes.page';
 const routes: Routes = [
   {
     path: '',
-    component: FilmesPage
-  }
+    component: FilmesPage,
+  },
+  {
+    path: 'home',
+    redirectTo: '../home/home.module',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
