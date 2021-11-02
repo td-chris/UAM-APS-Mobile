@@ -16,8 +16,8 @@ const routes: Routes = [
         loadChildren: () => import('../network/network.module').then(m => m.NetworkPageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'account',
+        loadChildren: () => import('../account/account.module').then(m => m.AccountPageModule)
       },
       {
         path: '',
