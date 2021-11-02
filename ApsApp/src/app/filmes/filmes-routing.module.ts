@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    redirectTo: '../home/home.module',
+    redirectTo: '../',
     pathMatch: 'full'
   },
 ];
