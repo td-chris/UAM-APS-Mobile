@@ -2,7 +2,7 @@
 Projeto mobile criado para avaliação da Universidade Anhembi Morumbi
 
 Movie app:
-O objetivo é criar um aplicativo mobile para simular um streaming de filmes, utilizando api externa para obter os dados deles.
+O objetivo é criar um aplicativo mobile para indicar os 20 filmes mais populares no momento, utilizando api externa para obter os dados deles.
 
 -----------------
 Techs:
