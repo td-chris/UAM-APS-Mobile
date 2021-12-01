@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Formulário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-title color="secondary" >
+      Formulário:
+    </ion-card-title>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Nome:</ion-label>
+        <ion-input type="text" placeholder="Digite seu nome..."></ion-input>    
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sobrenome:</ion-label>
+        <ion-input type="text" placeholder="Digite seu sobrenome..."></ion-input>    
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Filmes:</ion-label>
+        <ion-input type="text" placeholder="Seus filmes preferidos são?"></ion-input>    
+      </ion-item>
+    </ion-list>
+
+
+    <ion-list>
+      <ion-list-header>
+        Generos:
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Ação</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Comédia</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Terror</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Ficção</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Romance</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-button (click)="onClick()" color="success" shape="round">
+          Enviar
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button routerLink='/tabs/account' color="secondary" shape="round">
+          Voltar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    
+  </ion-card>
+</ion-content>
