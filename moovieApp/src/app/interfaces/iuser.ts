@@ -3,5 +3,5 @@ export default interface Iuser{
     nome: string;
     sobrenome: string;
     filmes: string;
-    generos: string[];
+    generos: string;
 }

@@ -8,10 +8,10 @@ export class UserService {
 
   public user: Iuser = {
     id: 1,
-    nome: 'Christian',
-    sobrenome: 'Todesquine',
-    filmes: 'A origem, Um dia depois de amanhã',
-    generos: ['ficção', 'terror']
+    nome: 'Sem nome',
+    sobrenome: '-',
+    filmes: '-',
+    generos: '-'
   }
 
   constructor() { }
