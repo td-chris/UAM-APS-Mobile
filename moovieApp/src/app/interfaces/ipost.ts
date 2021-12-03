@@ -1,5 +1,5 @@
 export default interface Ipost {
-    id: number;
+    id?: number;
     nome: string;
     foto: string;
     curtidas: number;
