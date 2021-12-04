@@ -1,7 +1,7 @@
 export default interface Iuser{
-    id: number;
+    id?: number;
     nome: string;
     sobrenome: string;
     filmes: string;
-    generos: [];
+    generos: string;
 }
