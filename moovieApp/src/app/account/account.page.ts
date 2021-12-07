@@ -10,11 +10,12 @@ import Iuser from '../interfaces/iuser';
 })
 export class AccountPage {
   public user: Iuser;
+  public users: Iuser[];
   private servico: UserService;
 
   constructor(userServico: UserService) {
     this.servico = userServico;
-    this.user = this.servico.buscarUser()
+    this.users = this.servico.buscarUser()
   }
 
 }

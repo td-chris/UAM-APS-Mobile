@@ -30,14 +30,21 @@ export class FormularioPage implements OnInit {
   }
 
   atualizar(): void{
-    this.servico.user.nome = this.nome;
-    this.servico.user.sobrenome = this.sobrenome;
-    this.servico.user.filmes = this.filmes;
-    this.servico.user.generos = this.generos;
+    this.servico.salvar({
+      nome: this.nome,
+      sobrenome: this.sobrenome,
+      filmes: this.filmes,
+      generos: this.generos
+    })
 
     this.voltar();
 
-    console.log(this.servico.user);
+    console.log(this.servico.users);
+  }
+
+  remover(indice: number): void {
+    this.servico.deletar(indice);
+    console.log(this.servico.users);
   }
 
 }
