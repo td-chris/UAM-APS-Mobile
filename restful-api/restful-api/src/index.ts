@@ -11,4 +11,4 @@ app.use(routes)
 
 app.listen(3333, () => console.log('Servidor ouvindo a porta: 3333'))
 
-//URL da API: http://localhost:3333/products/
+//URL da API: http://localhost:3333/users/

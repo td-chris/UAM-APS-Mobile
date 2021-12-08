@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import Iuser from './interfaces/iuser';
 // import { Storage } from '@ionic/storage';
+// import IProduct from './interfaces/iproducts';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +9,6 @@ import Iuser from './interfaces/iuser';
 export class UserService {
 
   constructor() {}
-  
-
-  
   
 }
   
