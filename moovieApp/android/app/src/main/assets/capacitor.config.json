@@ -1,0 +1,6 @@
+{
+	"appId": "com.moovieApp",
+	"appName": "moovieApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
