@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserService } from '../user.service';
 import Iuser from '../interfaces/iuser';
 
 

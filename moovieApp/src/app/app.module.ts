@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { MovieService } from './movie.service';
-import { UserService } from './user.service';
 
 import { IonicStorageModule } from '@ionic/storage-angular';
 
@@ -17,7 +16,7 @@ import { IonicStorageModule } from '@ionic/storage-angular';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, IonicStorageModule.forRoot()],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, MovieService, UserService],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, MovieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
