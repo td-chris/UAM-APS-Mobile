@@ -5,5 +5,9 @@
 </ion-header>
 
 <ion-content>
-
+  <div id="container">
+    <ion-input [(ngModel)]="descricao" placeholder="Digite seu post aqui!"></ion-input>
+    <ion-input [(ngModel)]="foto" placeholder="foto"></ion-input>
+    <ion-button routerLink="/tabs/network" routerLinkActive="router-link-active"  (click)="salvar()">Salvar</ion-button>
+  </div>
 </ion-content>

@@ -5,4 +5,5 @@ export default interface Ipost {
     descricao: string;
     foto: string;
     curtidas: number;
+    data: string;
 }

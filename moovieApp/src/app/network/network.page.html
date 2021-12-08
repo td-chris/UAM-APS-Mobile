@@ -17,13 +17,20 @@
               <img src="../../assets/images/marty-mcfly.jpg" alt="avatar image" />
             </ion-avatar> -->
 
-            <ion-card-title>
-              <h2>{{ post.nome }} {{ post.sobrenome }}</h2>
-            </ion-card-title>
+            <ion-row>
+              <ion-col size="9">
+                <ion-card-title>
+                  <h2>{{ post.nome }} {{ post.sobrenome }}</h2>
+                </ion-card-title>
+              </ion-col>
 
-            <ion-item>
-              <ion-button color="danger" (click)="remover(post.id)">X</ion-button>
-            </ion-item>
+              <ion-col size="3">
+                <ion-item>
+                  <ion-button color="danger" (click)="remover(post.id)">X</ion-button>
+                </ion-item>                
+              </ion-col>
+            </ion-row>
+
 
             <img src="../../assets/images/delorean.jpg" alt="movie image">
             <!-- <img src={{ post.foto }} alt="movie image"> -->
@@ -31,26 +38,6 @@
             <ion-card-content>
               <p>{{ post.descricao }}</p>
             </ion-card-content>
-
-            <ion-row>
-              <ion-col size="4">
-                <button ion-button icon-left clear small >
-                  <ion-icon name="thumbs-up"></ion-icon>
-                  <div>{{ post.curtidas }} Likes</div>
-                </button>
-              </ion-col>
-              <ion-col size="4">
-                <button ion-button icon-left clear small >
-                  <ion-icon name="text"></ion-icon>
-                  <div>{{ objeto_feed.qntd_comments }} Comments</div>
-                </button>
-              </ion-col>
-              <ion-col size="4" center text-center>
-                <ion-note>
-                  {{ objeto_feed.tempo_comment }}
-                </ion-note>
-              </ion-col>
-            </ion-row>
 
           </ion-list>
         </div>
@@ -64,43 +51,4 @@
     </ion-fab-button>
   </ion-fab>
 
-
-  <!-- <ion-card>
-    <ion-item>
-      <ion-avatar>
-        <img src="../../assets/images/marty-mcfly.jpg" alt="avatar image" />
-      </ion-avatar>
-      
-      <ion-card-title>
-        <h2>{{ objeto_feed.nome }}</h2>
-      </ion-card-title>
-      
-    </ion-item>
-
-    <img src="../../assets/images/delorean.jpg" alt="movie image">    
-
-  <ion-card-content>
-    <p>{{ objeto_feed.descricao }}</p>
-  </ion-card-content>
-
-  <ion-row>
-    <ion-col size="4">
-      <button ion-button icon-left clear small >
-        <ion-icon name="thumbs-up"></ion-icon>
-        <div>{{ objeto_feed.qntd_likes }} Likes</div>
-      </button>
-    </ion-col>
-    <ion-col size="4">
-      <button ion-button icon-left clear small >
-        <ion-icon name="text"></ion-icon>
-        <div>{{ objeto_feed.qntd_comments }} Comments</div>
-      </button>
-    </ion-col>
-    <ion-col size="4" center text-center>
-      <ion-note>
-        {{ objeto_feed.tempo_comment }}
-      </ion-note>
-    </ion-col>
-  </ion-row>
-</ion-card> -->
 </ion-content>
