@@ -7,30 +7,43 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card>
-    <ion-card-title color="primary">
-      <h1>User</h1> 
-    </ion-card-title>
 
-    <ion-text>
-      <h3>Nome:</h3>
-      <p>{{ user.nome }}</p>
-    </ion-text>
-    <ion-text>
-      <h3>Sobrenome:</h3>
-      <p>{{ user.sobrenome }}</p>
-    </ion-text>
-    <ion-text>
-      <h3>Filmes favoritos:</h3>
-      <p>{{ user.filmes }}</p>
-    </ion-text>
-    <ion-text>
-      <h3>Generos favoritos:</h3>
-      <p>{{ user.generos }}</p>
-    </ion-text>
-  </ion-card>
+    <ion-list *ngFor="let user of users">
+      <ion-card>
+        <ion-card-title color="primary">
+          <h1>User</h1> 
+        </ion-card-title>
 
-  <ion-button routerLink='/formulario' color="primary" shape="round">
-    Atualizar
-  </ion-button>
+        <ion-text>
+          <h3>Nome:</h3>
+          <p>{{ user.nome }}</p>
+        </ion-text>
+        <ion-text>
+          <h3>Sobrenome:</h3>
+          <p>{{ user.sobrenome }}</p>
+        </ion-text>
+        <ion-text>
+          <h3>Filmes favoritos:</h3>
+          <p>{{ user.filmes }}</p>
+        </ion-text>
+        <ion-text>
+          <h3>Generos favoritos:</h3>
+          <p>{{ user.generos }}</p>
+        </ion-text>
+      </ion-card>  
+    </ion-list>
+    
+  <ion-row>
+    <ion-col size="6">
+      <ion-button routerLink='/formulario' color="primary" shape="round">
+        Atualizar
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button (click)="recarregar()" color="success" shape="round">
+        Recarregar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
 </ion-content>
