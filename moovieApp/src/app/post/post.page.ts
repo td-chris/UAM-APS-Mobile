@@ -2,12 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import Ipost from '../interfaces/ipost';
 import Iuser from '../interfaces/iuser';
 
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-post',
   templateUrl: './post.page.html',
   styleUrls: ['./post.page.scss'],
 })
 export class PostPage implements OnInit {
+
+  public sanitizer: DomSanitizer;
+  public foto: SafeResourceUrl;
 
   ngOnInit() {
   }
@@ -26,13 +32,14 @@ export class PostPage implements OnInit {
 
   public idPost: number;
   public descricao: string;
-  public foto: string;
+  public fotoPost: string;
   public curtidas: number;
   public data: string;
 
 
-  constructor(){
+  constructor(sanit: DomSanitizer){
     this.buscar();
+    this.sanitizer = sanit;
   }
 
   recarregar(): void {
@@ -42,25 +49,6 @@ export class PostPage implements OnInit {
   async buscar(): Promise<void> {
     const resposta = await fetch(this.urlPost);
     this.posts = await resposta.json();
-  }
-
-  async buscarPorId(id: number): Promise<void> {
-    const userPost = {
-      idUser: 1,
-    };
-
-    const respostaPost = await fetch(`${this.urlPost}/${id}`);
-    const post: Ipost = await respostaPost.json();
-
-    const respostaUser = await fetch(`${this.urlUser}/${userPost.idUser}`);
-    const user: Iuser = await respostaUser.json();
-
-    this.nome = user.nome;
-    this.sobrenome = user.sobrenome;
-
-    this.descricao = post.descricao;
-    this.foto = post.foto;
-    this.curtidas = post.curtidas;
   }
 
   async salvar(): Promise<void> {
@@ -75,13 +63,8 @@ export class PostPage implements OnInit {
       nome: user.nome,
       sobrenome: user.sobrenome,
       descricao: this.descricao,
-      foto: this.foto,
-      curtidas: this.curtidas = 0,
-      data: this.data,
+      foto: this.foto
     };
-
-    let dataAtual = new Date().toLocaleDateString();
-    this.data = dataAtual;
 
     console.log(Object.keys(novo));
 
@@ -93,33 +76,16 @@ export class PostPage implements OnInit {
     this.buscar();
   }
 
-  async atualizar(id: number): Promise<void> {
-    const userPost = {
-      idUser: 1,
-    };
+  async fotografar(): Promise<void> {
+    const imagem = await Camera.getPhoto({
+      quality: 90,
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera,
+      allowEditing: false,
+    });
 
-    const respostaUser = await fetch(`${this.urlUser}/${userPost.idUser}`);
-    const user: Iuser = await respostaUser.json();
-
-    const postAtualizado = {
-      nome: user.nome,
-      sobrenome: user.sobrenome,
-      descricao: this.descricao,
-      foto: this.foto,
-      curtidas: this.curtidas,
-    };
-
-    const body = Object.keys(postAtualizado)
-      .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(postAtualizado[k])}`)
-      .join('&');
-
-    await fetch(`${this.urlPost}/${id}`, { method: 'PUT', body: new URLSearchParams(body) });
-    this.buscar();
-  }
-
-  async remover(id: number): Promise<void> {
-    await fetch(`${this.urlPost}/${id}`, { method: 'DELETE' });
-    this.buscar();
+    const imagemUrl = imagem.webPath;
+    this.foto = this.sanitizer.bypassSecurityTrustResourceUrl(imagemUrl);
   }
 
 }

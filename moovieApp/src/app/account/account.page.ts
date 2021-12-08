@@ -33,16 +33,6 @@ export class AccountPage {
     this.users = await resposta.json();
   }
 
-  async buscarPorId(id: number): Promise<void> {
-    const resposta = await fetch(`${this.url}/${id}`);
-    const user: Iuser = await resposta.json();
-
-    this.nome = user.nome;
-    this.sobrenome = user.sobrenome;
-    this.filmes = user.filmes;
-    this.generos = user.generos;
-  }
-
   async salvar(): Promise<void> {
     const novo = {
       nome: this.nome,
@@ -74,11 +64,6 @@ export class AccountPage {
       .join('&');
 
     await fetch(`${this.url}/${id}`, { method: 'PUT', body: new URLSearchParams(body) });
-    this.buscar();
-  }
-
-  async remover(id: number): Promise<void> {
-    await fetch(`${this.url}/${id}`, { method: 'DELETE' });
     this.buscar();
   }
 
