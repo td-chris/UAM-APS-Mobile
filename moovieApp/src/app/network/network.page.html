@@ -13,9 +13,6 @@
 
         <div id="container">
           <ion-list *ngFor="let post of posts">
-            <!-- <ion-avatar>
-              <img src="../../assets/images/marty-mcfly.jpg" alt="avatar image" />
-            </ion-avatar> -->
 
             <ion-row>
               <ion-col size="9">
@@ -32,8 +29,9 @@
             </ion-row>
 
 
-            <img src="../../assets/images/delorean.jpg" alt="movie image">
-            <!-- <img src={{ post.foto }} alt="movie image"> -->
+            <div id="container">
+              <img [src]="post.foto" *ngIf="foto" />
+            </div>
 
             <ion-card-content>
               <p>{{ post.descricao }}</p>
@@ -48,6 +46,12 @@
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button routerLink="/post" routerLinkActive="router-link-active"  size="small" color="success">
       <ion-icon name="add" size="small"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="recarregar()"  size="small" color="primary">
+      <ion-icon name="refresh-outline" size="small"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 

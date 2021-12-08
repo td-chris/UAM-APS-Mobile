@@ -4,10 +4,20 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-fab vertical="center" horizontal="center" slot="fixed">
+  <ion-fab-button (click)="fotografar()">
+    <ion-icon name="camera"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
 <ion-content>
   <div id="container">
+    <div id="container">
+      <img [src]="foto" *ngIf="foto" />
+    </div>
     <ion-input [(ngModel)]="descricao" placeholder="Digite seu post aqui!"></ion-input>
-    <ion-input [(ngModel)]="foto" placeholder="foto"></ion-input>
     <ion-button routerLink="/tabs/network" routerLinkActive="router-link-active"  (click)="salvar()">Salvar</ion-button>
   </div>
+
+
 </ion-content>
